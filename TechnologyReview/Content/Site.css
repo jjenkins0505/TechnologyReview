@@ -1,6 +1,15 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url('Images/gears-2133620_960_720.jpg');
+    background-position: center;
+    color: white;
+}
+
+.jumboSettings
+{
+    background-color:lightgray;
+    color: black;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -8,6 +17,23 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+
+/*jumbotron settings on all*/
+.detailSettings 
+{
+    text-align:right;
+    font-size:25px;
+}
+
+.buttonSetting
+{
+    background-color:black;
+    color:white;
+}
+
+
+
+
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 

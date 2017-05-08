@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -10,16 +11,16 @@ namespace TechnologyReview.Models
 
         [Key]
         public int ID { get; set; }
+        public string Type { get; set; }
+        
+   
 
-        public string Phone { get; set; }
-        public string LapTop { get; set; }
-
-        [Display(Name = "Smart Watches")]
-        public string SmartWatches { get; set; }
+        
+      
 
 
-        //ICollection is more efficient when setting up a one to many relationship code first. type of collection (cousin to a list)
-        public virtual ICollection<Book> Books { get; set; }
+        //ICollection 
+        public virtual ICollection<Reviews> Reviews { get; set; }
 
 
     }

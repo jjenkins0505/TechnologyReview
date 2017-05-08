@@ -1,0 +1,72 @@
+﻿@model IEnumerable<TechnologyReview.Models.Reviews>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Reviews</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail jumboSettings">
+                <div class="caption">
+                    @*or text center after caption would work too!*@
+                <h3 class="text-center">@Html.DisplayFor(modelItem => item.Name)</h3>
+                <p class="text-center">@Html.DisplayFor(modelItem => item.ReviewDescription)</p>
+                <p class="text-center">@Html.DisplayFor(modelItem => item.Date)</p>
+                <p class="text-center buttonSetting">@Html.ActionLink("View Details", "Details", new { id = item.ID }, new { role = "button", @class = "btn btn-primary" })</p>
+            </div>
+        </div>
+    </div>
+
+    }
+    </div>
+
+            @*<table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Catagory.Type)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ReviewDescription)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Date)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Catagory.Type)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ReviewDescription)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Date)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        </td>
+                    </tr>
+                }
+
+            </table>*@
